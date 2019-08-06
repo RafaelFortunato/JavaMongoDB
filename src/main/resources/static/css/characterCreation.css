@@ -1,0 +1,102 @@
+* {
+    font-family: 'Catamaran', cursive;
+}
+
+body {
+    margin:0;
+    background-color: #3F3B36;
+}
+
+.header {
+    height: 40px;
+    background-color: RoyalBlue;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0px 5px 10px #1F1B16;
+
+}
+
+.headerButton {
+    color: white;
+    text-decoration: none;
+    border-radius: 10%;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.headerButton:hover {
+    background-color: DodgerBlue;
+}
+
+.container {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 5%;
+    margin: 50px auto 0 auto;
+    box-shadow: 2px 5px 20px #1F1B16;
+    align-items: center;
+    padding: 20px;
+}
+
+#characterForm {
+  width: 90%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: RoyalBlue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: DodgerBlue;
+}
+
+.statRange {
+    margin: 4px 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.statLabel {
+    font-size: 12px;
+ width: 15%;
+}
+
+input[type=range] {
+    width: 50%;
+}
+
+.statValue {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    text-align:center;
+}
+

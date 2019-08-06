@@ -2,8 +2,6 @@ package com.example.JavaMongoDB.Services;
 
 import com.example.JavaMongoDB.Models.CharacterModel;
 import com.example.JavaMongoDB.Repositories.CharacterRepository;
-import com.example.JavaMongoDB.Utils.CharacterRace;
-import com.example.JavaMongoDB.Utils.CharacterRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -18,6 +16,7 @@ public class CharacterService {
 
     public void createCharacter(CharacterModel c) {
         Assert.hasText(c.getName(), "Name must not be null or empty!");
+//        c.setTimeCreated();
 //
 //        CharacterModel c = new CharacterModel();
 //        c.setName(name);
@@ -30,11 +29,7 @@ public class CharacterService {
         characterRepository.save(c);
     }
 
-    public List<CharacterModel> getCharacters(String name, String role) {
-        return characterRepository.findAllByNameOrRole(name, role);
+    public List<CharacterModel> getCharacters() {
+        return characterRepository.findAllByOrderByIdDesc();
     }
-
-//    public List<CharacterModel> getCharactersByRole(String role) {
-//        return characterRepository.findAllByRole(role);
-//    }
 }

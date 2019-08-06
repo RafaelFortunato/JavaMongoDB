@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface CharacterRepository extends CrudRepository<CharacterModel, String> {
     CharacterModel findByName(String name);
-    List<CharacterModel> findAllByRole(String role);
-
-    List<CharacterModel> findAllByNameOrRole(String name, String role);
+    List<CharacterModel> findAllByName(String name);
+    List<CharacterModel> findAllByOrderByIdDesc();
 }

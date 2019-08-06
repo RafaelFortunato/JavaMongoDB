@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/characterCreation.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <a class="headerButton" href="/characterViewer" role="button">Character Viewer</a>
+    </div>
+
+    <div class="container">
+        <h1>Character Creation</h1>
+
+        <form id="characterForm" oninput="str.value=parseInt(strength.value);
+                                            wis.value=parseInt(wisdom.value);
+                                            agi.value=parseInt(agility.value);
+                                            vit.value=parseInt(vitality.value);">
+            <input type="text" name="name" placeholder="Name">
+
+            <select name="role">
+                <option value="WARRIOR">Warrior</option>
+                <option value="MAGE">Mage</option>
+                <option value="CLERIC">Cleric</option>
+                <option value="ASSASSIN">Assassin</option>
+            </select>
+
+            <select name="race">
+                <option value="HUMAN">Human</option>
+                <option value="ELF">Elf</option>
+                <option value="ORC">Orc</option>
+                <option value="TREANT">Treant</option>
+                <option value="DRAGON">Dragon</option>
+            </select>
+
+            <div class="statRange">
+                <div class="statLabel">Strength</div>
+                <input type="range" name="strength" min="1" max="10" value="5">
+                <output class="statValue" name="str" for="strength">5</output>
+            </div>
+
+            <div class="statRange">
+                <div class="statLabel">Wisdom</div>
+                <input type="range" name="wisdom" min="1" max="10" value="5">
+                <output class="statValue" name="wis" for="wisdom">5</output>
+            </div>
+
+            <div class="statRange">
+                <div class="statLabel">Agility</div>
+                <input type="range" name="agility" min="1" max="10" value="5">
+                <output class="statValue" name="agi" for="agility">5</output>
+            </div>
+
+            <div class="statRange">
+                <div class="statLabel">Vitality</div>
+                <input type="range" name="vitality" min="1" max="10" value="5">
+                <output class="statValue" name="vit" for="vitality">5</output>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+</body>
+
+<script src="js/characterCreation.js"> </script>
+
+</html>
