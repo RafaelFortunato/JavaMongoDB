@@ -28,16 +28,19 @@ body {
     background-color: DodgerBlue;
 }
 
-.container {
+.whiteCard {
     background-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 2px 5px 20px #1F1B16;
+    padding: 20px;
+}
+
+.characterCreatorContainer {
     display: flex;
     flex-direction: column;
     width: 300px;
-    border-radius: 5%;
     margin: 50px auto 0 auto;
-    box-shadow: 2px 5px 20px #1F1B16;
     align-items: center;
-    padding: 20px;
 }
 
 #characterForm {
@@ -82,7 +85,7 @@ input[type=submit]:hover {
 
 .statLabel {
     font-size: 12px;
- width: 15%;
+    width: 15%;
 }
 
 input[type=range] {

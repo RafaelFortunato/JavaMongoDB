@@ -16,15 +16,10 @@ public class CharacterController {
     @Autowired
     CharacterService characterService;
 
-    @GetMapping(value = "/characterCreation")
-    public ModelAndView showForm() {
-        return new ModelAndView("characterCreation", "character", new CharacterModel());
-    }
-
     @PostMapping(value = "/character")
-    public ModelAndView createCharacter(@ModelAttribute("character") CharacterModel character) {
+    public ResponseEntity createCharacter(@ModelAttribute CharacterModel character) {
         characterService.createCharacter(character);
-        return new ModelAndView("characterCreation", HttpStatus.OK);//new ResponseEntity<>("Character created successfully", HttpStatus.OK);
+        return new ResponseEntity<>("Character created successfully", HttpStatus.OK);
     }
 
     @GetMapping(value = "/character")

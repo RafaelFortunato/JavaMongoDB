@@ -7,8 +7,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
-
 @Data
 @Document(collection = "character")
 public class CharacterModel {
@@ -24,5 +22,5 @@ public class CharacterModel {
     Integer wisdom;
     Integer agility;
     Integer vitality;
-    Date timeCreated;
+    String timeCreated;
 }

@@ -1,4 +1,4 @@
-$("#characterForm").submit(function(e){
+$("#characterForm").submit(function(e) {
    $.ajax({
        url: 'character',
        type: 'post',
@@ -10,3 +10,4 @@ $("#characterForm").submit(function(e){
        }
    })
 });
+
